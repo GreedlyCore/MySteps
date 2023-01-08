@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_gravity="center"
+    android:weightSum="3"
+
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select new daily limit..."
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="World Health Organization recommends walk at least 8000 steps to prevent early aging"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/scrool_choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scroll_background_color="@color/white"
+
+
+
+
+            app:scroll_selected_item_background="#FFF"
+            app:scroll_item_text_color="@android:color/black"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator_color="#FFF"
+            app:scroll_item_text_size="40sp"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#FFC107"/>
+
+
+        <Button
+            android:id="@+id/btn_select_new_value"
+            android:text="Select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

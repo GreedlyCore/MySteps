@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circleProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progress_max="2500"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="10dp"
+                app:cpb_round_border="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="188dp"
+                android:src="@drawable/foot_step"
+                app:layout_constraintBottom_toBottomOf="@+id/circleProgressBar"
+                app:layout_constraintEnd_toStartOf="@+id/tv_stepsTaken"
+                app:layout_constraintHorizontal_bias="0.922"
+                app:layout_constraintStart_toStartOf="@+id/circleProgressBar" />
+
+            <TextView
+                android:id="@+id/tv_stepsTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/NOW"
+                android:textSize="45sp"
+                app:layout_constraintBottom_toBottomOf="@+id/circleProgressBar"
+                app:layout_constraintEnd_toEndOf="@+id/circleProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/circleProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/circleProgressBar" />
+
+            <TextView
+                android:id="@+id/tv_stepsDailyLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="/MAX"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/circleProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/circleProgressBar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_stepsTaken" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_plusStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+PLUS ONE"
+        android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_changeMaxStepsLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change daily limit"
+            android:textSize="20sp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
